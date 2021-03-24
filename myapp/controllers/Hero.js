@@ -30,7 +30,19 @@ class HeroController {
       let query = `
       UPDATE Charas (name, element) 
       SET name = '${name}', element = '${element}'
-      )`;
+      where name = '${name}', element = '${element}'`;
+      let data = await heroDB.postHero(query);
+      res.status(200).json(data);
+    } catch (error) {
+      res.status(400).json(error);
+    }
+  }
+  async delete(req, res) {
+    try {
+      let { name, element } = req.body;
+      let query = `
+      DELETE from Charas 
+      where name = '${name}'`;
       let data = await heroDB.postHero(query);
       res.status(200).json(data);
     } catch (error) {

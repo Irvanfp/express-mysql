@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 
 module.exports = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'Ikhda123',
+  user: 'irvan',
+  password: '1ndonesiAr@ya',
   database: 'belajar_sequelize'
 });

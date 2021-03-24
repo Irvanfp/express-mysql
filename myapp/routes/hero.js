@@ -4,5 +4,7 @@ const routes = express();
 
 routes.get('/', heroController.get);
 routes.post('/', heroController.post);
+routes.put('/', heroController.put);
+routes.delete('/', heroController.delete);
 
 module.exports = routes;
